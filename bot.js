@@ -1,6 +1,7 @@
 const { Telegraf } = require('telegraf');
+require('dotenv').config();
 
-const bot = new Telegraf("6262522626:AAEDDeIK7eL4xtP_wfJRaLfeyEhrSMThRyo");
+const bot = new Telegraf(process.env.secretkey);
 bot.start((ctx) => ctx.reply('Xush kelibsiz ushbu bot faqat ushbu linkda ishlaydi! https://voiceconvert.netlify.app/ '));
 // bot.on("animation")
 // bot.on('voice', (ctx) => log);
